@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin:0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99.1vh;
+    background-color: black;
+    
+}
+.game{
+    width: 90vmin;
+    height: 80vmin;
+    background-color:rgb(0, 76, 0);
+    padding: 3px;
+    display: flex;   
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+}
+.game-details{
+    width: 100%;
+    height: 10%;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 500;
+}
+.bord{
+    width: 100%;
+    background: url("img/bg.jpg");
+    height: 100%;
+    display: grid;
+    grid-template: repeat(20,1fr)/repeat(20,1fr);
+    padding: 2px;
+    overflow: hidden;
+    
+    
+}
+.food{
+     position: relative;
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+   
+}
+.food img{
+    width: 100%;
+    position: absolute;
+}
+.head{
+    position: relative;
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+}
+.head img{
+    
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+}
+.body{
+    background-color: rgb(229, 210, 4);
+    border-radius: 15px;
+    z-index: 1;
+    
+    
+}
+.control{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.arrow{
+    background-color: white;
+    width: 13vw;
+    height: 6vh;
+    color: green;
+    font-size: 1.4em;
+    text-align: center;
+    margin: 3px;
+    border-radius: 4px;
+    padding: 1px;
+}
+
+.menu{
+    position: absolute;
+    top: auto;
+    left: auto;
+    background-color: rgb(1, 1, 51);
+    color: white;
+    width: 37vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    border-radius: 10px;
+}
+.menu h3{
+    position: inherit;
+    top: 10%;
+}
+.menu span{
+    display: flex;
+    /* flex-direction: column; */
+}
+.menu span .btn{
+    background-color: whitesmoke;
+    color:rgb(1, 1, 51);
+    border-radius: 10px;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    padding: 5PX;
+    cursor: pointer;
+    font-weight: bold ;
+    transition: 0.5s;
+}
+.menu span .btn:hover{
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 0 10px 0;
+}
+
+@media screen and (max-width:800px) {
+    .control{
+     display: flex;
+    }
+    .arrow{
+        height: 5vh;
+    }
+    .game{
+        height: 60%;
+    }
+    .menu {
+        top: 40%;
+        left: auto;
+        width: 92vw;
+        height:30vh;
+    }
+}
